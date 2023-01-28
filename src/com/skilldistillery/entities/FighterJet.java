@@ -10,8 +10,8 @@ public class FighterJet extends Jet {
 	@Override
 	public String fly() {
 		double time = range / speed;
-		double newTime = Math.round(time * 100) /100.0;
-		return "The " + jetModel +  " fighter jet can fly for " + newTime + " hours.";
+		double newTime = Math.round(time * 100) / 100.0;
+		return "The " + jetModel + " fighter jet can fly for " + newTime + " hours.";
 	}
 
 }

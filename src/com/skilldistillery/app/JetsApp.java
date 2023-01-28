@@ -25,28 +25,28 @@ public class JetsApp {
 //		boolean go = true;
 //
 //		do {
-			System.out.println("Please select a menu option 1-10:\n" + "1. List fleet of jets \n" + "2. Fly all jets \n"
-					+ "3. View fastest jet \n" + "4. View jet with the longest range \n" + "5. Load cargo jet \n"
-					+ "6. Fight \n" + "7. Create your own jet \n" + "8. Remove jet from fleet \n" + "9. Quit ");
+		System.out.println("Please select a menu option 1-10:\n" + "1. List fleet of jets \n" + "2. Fly all jets \n"
+				+ "3. View fastest jet \n" + "4. View jet with the longest range \n" + "5. Load cargo jet \n"
+				+ "6. Fight \n" + "7. Create your own jet \n" + "8. Remove jet from fleet \n" + "9. Quit ");
 
-			int userIn = sc.nextInt();
-			switch (userIn) {
+		int userIn = sc.nextInt();
+		switch (userIn) {
 
-			case (1):
-				field.listFleet();
+		case (1):
+			field.listFleet();
+			break;
+
+		case (2):
+			field.flyJets();
+			break;
+
+			case (3):
+				field.fastest();
 				break;
 
-			case (2):
-				field.flyJets();
+			case (4):
+				field.longestRange();
 				break;
-
-//			case (3):
-//				fastest();
-//				break;
-//
-//			case (4):
-//				longestRange();
-//				break;
 //
 //			case (5):
 //				loadCargo();
@@ -64,11 +64,11 @@ public class JetsApp {
 //				removeJet();
 //				break;
 
-			case (9):
-				System.out.println("Goodbye");
+		case (9):
+			System.out.println("Goodbye");
 //				go = false;
-				break;
-			}
+			break;
+		}
 //			default:
 //				continue;
 //
@@ -77,15 +77,5 @@ public class JetsApp {
 //		} while (go == true);
 //		return;
 	}
-
-//	 List fleet
-//	Fly all jets
-//	View fastest jet
-//	View jet with longest range
-//	Load all Cargo Jets
-//	Dogfight!
-//	Add a jet to Fleet
-//	Remove a jet from Fleet
-//	Quit
 
 }

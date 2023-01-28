@@ -55,8 +55,27 @@ public class Airfield {
 	public void flyJets() {
 		for (Jet jet : jets) {
 			System.out.println(jet.fly());
-			
 		}
+	}
 
+	public void fastest() {
+		Jet fastest = jets.get(0);
+		for (Jet jet : jets) {
+			if (fastest.getSpeed() < jet.getSpeed()) {
+				fastest = (jet);
+
+			}
+		}
+		System.out.println("The fastest Jet is: " + fastest);
+	}
+	
+	public void longestRange() {
+		Jet longest = jets.get(0);
+		for (Jet jet : jets) {
+			if(longest.getRange()<jet.getRange()) {
+				longest =(jet);
+			}
+		}
+		System.out.println("The jet with the longest range is: " + longest);
 	}
 }
