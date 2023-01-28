@@ -1,4 +1,5 @@
-FighterJet,model,speed,range,price
-NameOfClass,model,speed,range,price
-
-
+FighterJet,F15,1650,3500,30000
+FighterJet,F35,1230,1500,70000
+CargoJet,C130,330,2000,12000
+SpyJet,SR71,2200,3250,34000
+SpyJet,U2,500,7000,11000
