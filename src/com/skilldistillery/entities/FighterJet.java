@@ -17,7 +17,7 @@ public class FighterJet extends Jet implements Combat {
 	@Override
 	public void dogFight() {
 		System.out.println(jetModel + " is in a dogfight !! ");
-		
+
 	}
 
 }

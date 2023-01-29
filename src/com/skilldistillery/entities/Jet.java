@@ -3,7 +3,6 @@ package com.skilldistillery.entities;
 import java.util.Objects;
 
 public abstract class Jet {
-
 	protected String jetName;
 	protected String jetModel;
 	protected int speed;
@@ -20,8 +19,9 @@ public abstract class Jet {
 		this.range = range;
 		this.cost = cost;
 	}
+
 	public Jet() {
-		
+
 	}
 
 	public String getJetName() {
@@ -85,8 +85,8 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet Type: " + jetName + ", Model: " + jetModel + ", speed:" + speed + " MPH, range:" + range
-				+ " Miles, cost: $" + cost + "\n";
+		return "Type:" + jetName + ", Model:" + jetModel + ", speed:" + speed + " MPH, range:" + range
+				+ " Miles, cost:$" + cost + "\n";
 	}
 
 }

@@ -18,6 +18,7 @@ public class JetsApp {
 
 		field.jets();
 		userMenu();
+		sc.close();
 	}
 
 	public void userMenu() {
@@ -25,9 +26,10 @@ public class JetsApp {
 		boolean go = true;
 
 		do {
-			System.out.println("Please select a menu option 1-10:\n" + "1. List fleet of jets \n" + "2. Fly all jets \n"
-					+ "3. View fastest jet \n" + "4. View jet with the longest range \n" + "5. Load cargo jet \n"
-					+ "6. Fight \n" + "7. Create your own jet \n" + "8. Remove jet from fleet \n" + "9. Quit ");
+			System.out.println("\nPlease select a menu option 1-10:\n" + "1. List fleet of jets \n"
+					+ "2. Fly all jets \n" + "3. View fastest jet \n" + "4. View jet with the longest range \n"
+					+ "5. Load cargo jet \n" + "6. Fight \n" + "7. Create your own jet \n"
+					+ "8. Remove jet from fleet \n" + "9. Quit ");
 
 			int userIn = sc.nextInt();
 			switch (userIn) {
@@ -60,9 +62,9 @@ public class JetsApp {
 				field.makeJet();
 				break;
 
-//			case (8):
-//				field.removeJet();
-//				break;
+			case (8):
+				field.removeJet();
+				break;
 
 			case (9):
 				System.out.println("Goodbye");
@@ -71,12 +73,6 @@ public class JetsApp {
 			}
 
 		} while (go == true);
-		return;
-	}
-
-	
-
-	public void removeJet() {
 
 	}
 

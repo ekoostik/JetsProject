@@ -89,7 +89,7 @@ public class Airfield {
 
 		}
 	}
-	
+
 	public void fight() {
 		for (Jet jet : jets) {
 			if (jet instanceof Combat) {
@@ -97,24 +97,33 @@ public class Airfield {
 			}
 		}
 	}
-	
+
 	public void makeJet() {
-		
+
 		String jetName = "JetImpl";
-		
+
 		System.out.println("Lets make a Jet ! \n Enter a jet model.");
-		String jetModel=sc.next();
-				System.out.println("Enter the jet speed. ");
-				int speed = sc.nextInt();
-				System.out.println("Enter the jet range in miles.");
-				double range = sc.nextDouble();
-				System.out.println("Enter the jet cost. ");
-				double cost = sc.nextDouble();
-				Jet jet = new JetImpl(jetName, jetModel, speed, range, cost);
-				jets().add(jet);
-				
-		
-		
-		
+		String jetModel = sc.next();
+		System.out.println("Enter the jet speed. ");
+		int speed = sc.nextInt();
+		System.out.println("Enter the jet range in miles.");
+		double range = sc.nextDouble();
+		System.out.println("Enter the jet cost. ");
+		double cost = sc.nextDouble();
+		Jet jet = new JetImpl(jetName, jetModel, speed, range, cost);
+		jets().add(jet);
+
 	}
+
+	public void removeJet() {
+		System.out.println("Lets remove a jet. \nChoose a jet number from the list to be removed. ");
+
+		for (Jet jet : jets) {
+			int index = jets.indexOf(jet);
+			System.out.println(index + ". " + jet.getJetName() + " " + jet.jetModel);
+		}
+		int choice = sc.nextInt();
+		jets.remove(choice);
+	}
+
 }

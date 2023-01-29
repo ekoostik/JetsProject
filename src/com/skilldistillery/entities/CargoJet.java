@@ -1,8 +1,6 @@
 package com.skilldistillery.entities;
 
-
-
-public class CargoJet extends Jet implements CargoCarrier  {
+public class CargoJet extends Jet implements CargoCarrier {
 
 	public CargoJet(String jetName, String jetModel, int speed, double range, double cost) {
 		super(jetName, jetModel, speed, range, cost);
@@ -11,8 +9,6 @@ public class CargoJet extends Jet implements CargoCarrier  {
 
 	@Override
 	public String fly() {
-//	this.speed=speed;
-//	this.range=range;
 
 		double time = range / speed;
 		double newTime = Math.round(time * 100) / 100.0;

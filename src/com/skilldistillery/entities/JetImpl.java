@@ -4,7 +4,7 @@ public class JetImpl extends Jet {
 
 	public JetImpl(String jetName, String jetModel, int speed, double range, double cost) {
 		super(jetName, jetModel, speed, range, cost);
-		// TODO Auto-generated constructor stub
+
 	}
 
 	@Override
