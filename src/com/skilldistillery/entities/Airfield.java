@@ -5,8 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Airfield {
+	private Scanner sc = new Scanner(System.in);
 	private List<Jet> jets = new ArrayList<>();
 
 	private String fileName = "jets.txt";
@@ -94,5 +96,25 @@ public class Airfield {
 				((Combat) jet).dogFight();
 			}
 		}
+	}
+	
+	public void makeJet() {
+		
+		String jetName = "JetImpl";
+		
+		System.out.println("Lets make a Jet ! \n Enter a jet model.");
+		String jetModel=sc.next();
+				System.out.println("Enter the jet speed. ");
+				int speed = sc.nextInt();
+				System.out.println("Enter the jet range in miles.");
+				double range = sc.nextDouble();
+				System.out.println("Enter the jet cost. ");
+				double cost = sc.nextDouble();
+				Jet jet = new JetImpl(jetName, jetModel, speed, range, cost);
+				jets().add(jet);
+				
+		
+		
+		
 	}
 }

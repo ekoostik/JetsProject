@@ -20,6 +20,9 @@ public abstract class Jet {
 		this.range = range;
 		this.cost = cost;
 	}
+	public Jet() {
+		
+	}
 
 	public String getJetName() {
 		return jetName;

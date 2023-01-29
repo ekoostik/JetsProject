@@ -22,23 +22,23 @@ public class JetsApp {
 
 	public void userMenu() {
 
-//		boolean go = true;
-//
-//		do {
-		System.out.println("Please select a menu option 1-10:\n" + "1. List fleet of jets \n" + "2. Fly all jets \n"
-				+ "3. View fastest jet \n" + "4. View jet with the longest range \n" + "5. Load cargo jet \n"
-				+ "6. Fight \n" + "7. Create your own jet \n" + "8. Remove jet from fleet \n" + "9. Quit ");
+		boolean go = true;
 
-		int userIn = sc.nextInt();
-		switch (userIn) {
+		do {
+			System.out.println("Please select a menu option 1-10:\n" + "1. List fleet of jets \n" + "2. Fly all jets \n"
+					+ "3. View fastest jet \n" + "4. View jet with the longest range \n" + "5. Load cargo jet \n"
+					+ "6. Fight \n" + "7. Create your own jet \n" + "8. Remove jet from fleet \n" + "9. Quit ");
 
-		case (1):
-			field.listFleet();
-			break;
+			int userIn = sc.nextInt();
+			switch (userIn) {
 
-		case (2):
-			field.flyJets();
-			break;
+			case (1):
+				field.listFleet();
+				break;
+
+			case (2):
+				field.flyJets();
+				break;
 
 			case (3):
 				field.fastest();
@@ -47,35 +47,37 @@ public class JetsApp {
 			case (4):
 				field.longestRange();
 				break;
-//
+
 			case (5):
 				field.loadAllCargo();
 				break;
-//
+
 			case (6):
 				field.fight();
 				break;
-//
-//			case (7):
-//				makeJet();
-//				break;
-//
+
+			case (7):
+				field.makeJet();
+				break;
+
 //			case (8):
-//				removeJet();
+//				field.removeJet();
 //				break;
 
-		case (9):
-			System.out.println("Goodbye");
-//				go = false;
-			break;
-		}
-//			default:
-//				continue;
-//
-//			}
-//
-//		} while (go == true);
-//		return;
+			case (9):
+				System.out.println("Goodbye");
+				go = false;
+				break;
+			}
+
+		} while (go == true);
+		return;
+	}
+
+	
+
+	public void removeJet() {
+
 	}
 
 }
