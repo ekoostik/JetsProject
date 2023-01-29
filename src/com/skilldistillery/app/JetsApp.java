@@ -26,7 +26,7 @@ public class JetsApp {
 		boolean go = true;
 
 		do {
-			System.out.println("\nPlease select a menu option 1-10:\n" + "1. List fleet of jets \n"
+			System.out.println("\nPlease select a menu option 1-9:\n" + "1. List fleet of jets \n"
 					+ "2. Fly all jets \n" + "3. View fastest jet \n" + "4. View jet with the longest range \n"
 					+ "5. Load cargo jet \n" + "6. Fight \n" + "7. Create your own jet \n"
 					+ "8. Remove jet from fleet \n" + "9. Quit ");
@@ -70,6 +70,9 @@ public class JetsApp {
 				System.out.println("Goodbye");
 				go = false;
 				break;
+				
+				default:
+					continue;
 			}
 
 		} while (go == true);

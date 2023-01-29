@@ -1,8 +1,8 @@
 package com.skilldistillery.entities;
 
-public class JetImpl extends Jet {
+public class CustomJet extends Jet {
 
-	public JetImpl(String jetName, String jetModel, int speed, double range, double cost) {
+	public CustomJet(String jetName, String jetModel, int speed, double range, double cost) {
 		super(jetName, jetModel, speed, range, cost);
 
 	}

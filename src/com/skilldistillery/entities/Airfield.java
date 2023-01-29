@@ -100,7 +100,7 @@ public class Airfield {
 
 	public void makeJet() {
 
-		String jetName = "JetImpl";
+		String jetName = "CustomJet";
 
 		System.out.println("Lets make a Jet ! \n Enter a jet model.");
 		String jetModel = sc.next();
@@ -110,13 +110,13 @@ public class Airfield {
 		double range = sc.nextDouble();
 		System.out.println("Enter the jet cost. ");
 		double cost = sc.nextDouble();
-		Jet jet = new JetImpl(jetName, jetModel, speed, range, cost);
-		jets().add(jet);
+		Jet jet = new CustomJet(jetName, jetModel, speed, range, cost);
+		jets.add(jet);
 
 	}
 
 	public void removeJet() {
-		System.out.println("Lets remove a jet. \nChoose a jet number from the list to be removed. ");
+		System.out.println("Lets remove a jet. \nChoose a number from the list to be removed. ");
 
 		for (Jet jet : jets) {
 			int index = jets.indexOf(jet);
@@ -125,5 +125,6 @@ public class Airfield {
 		int choice = sc.nextInt();
 		jets.remove(choice);
 	}
+	
 
 }

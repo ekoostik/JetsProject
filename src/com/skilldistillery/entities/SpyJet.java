@@ -4,7 +4,7 @@ public class SpyJet extends Jet {
 
 	public SpyJet(String jetName, String jetModel, int speed, double range, double cost) {
 		super(jetName, jetModel, speed, range, cost);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
