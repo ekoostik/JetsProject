@@ -48,13 +48,13 @@ public class JetsApp {
 				field.longestRange();
 				break;
 //
-//			case (5):
-//				loadCargo();
-//				break;
+			case (5):
+				field.loadAllCargo();
+				break;
 //
-//			case (6):
-//				fight();
-//				break;
+			case (6):
+				field.fight();
+				break;
 //
 //			case (7):
 //				makeJet();

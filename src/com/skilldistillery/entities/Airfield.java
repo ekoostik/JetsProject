@@ -68,14 +68,31 @@ public class Airfield {
 		}
 		System.out.println("The fastest Jet is: " + fastest);
 	}
-	
+
 	public void longestRange() {
 		Jet longest = jets.get(0);
 		for (Jet jet : jets) {
-			if(longest.getRange()<jet.getRange()) {
-				longest =(jet);
+			if (longest.getRange() < jet.getRange()) {
+				longest = (jet);
 			}
 		}
 		System.out.println("The jet with the longest range is: " + longest);
+	}
+
+	public void loadAllCargo() {
+		for (Jet jet : jets) {
+			if (jet instanceof CargoCarrier) {
+				((CargoCarrier) jet).loadCargo();
+			}
+
+		}
+	}
+	
+	public void fight() {
+		for (Jet jet : jets) {
+			if (jet instanceof Combat) {
+				((Combat) jet).dogFight();
+			}
+		}
 	}
 }
