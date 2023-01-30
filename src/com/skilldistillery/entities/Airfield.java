@@ -104,15 +104,27 @@ public class Airfield {
 
 		System.out.println("Lets make a Jet ! \n Enter a jet model.");
 		String jetModel = sc.next();
-		System.out.println("Enter the jet speed. ");
+		System.out.println("Enter the jet speed in MPH. ");
+		while (!sc.hasNextInt()) {
+			System.out.println("Please enter a number for MPH ");
+			sc.next();
+		}
 		int speed = sc.nextInt();
 		System.out.println("Enter the jet range in miles.");
+		while (!sc.hasNextDouble()) {
+			System.out.println("Please enter a number for range. ");
+			sc.next();
+		}
 		double range = sc.nextDouble();
 		System.out.println("Enter the jet cost. ");
+		while (!sc.hasNextDouble()) {
+			System.out.println("Please enter a number for cost");
+			sc.next();
+		}
 		double cost = sc.nextDouble();
 		Jet jet = new CustomJet(jetName, jetModel, speed, range, cost);
 		jets.add(jet);
-
+		System.out.println("[" + jet.getJetName() + " " + jet.getJetModel() + "] Has been added to the fleet!");
 	}
 
 	public void removeJet() {
@@ -124,7 +136,7 @@ public class Airfield {
 		}
 		int choice = sc.nextInt();
 		jets.remove(choice);
+		System.out.println("Jet has been deleted! ");
 	}
-	
 
 }
